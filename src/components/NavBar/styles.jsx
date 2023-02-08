@@ -24,3 +24,17 @@ export const TitleNavbar = styled.div`
     font-size: 1rem;
   }
 `;
+
+export const ButtonNavbar = styled.button`
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  background-color: black;
+  @media (max-width: 400px) {
+    font-size: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;

@@ -1,18 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import { BoxAuthContainer } from "../../components/BoxAuthContainer";
 import { CustomButton } from "../../components/CustomButton";
-import { useForm } from "../../hooks/useForm";
+import { useHandleAuth } from "../../hooks/useHandleAuth";
 import { LoginContainer } from "./styles";
 
 export const LoginScreen = () => {
-  const navigate = useNavigate();
-  const [formValues, handleInputChange] = useForm({
-    email: "",
-    password: "",
-  });
-
-  const { email, password } = formValues;
-  console.log(email);
+  const [handleInputChange, handleAuth, email, password] = useHandleAuth(
+    "https://backend-factoria-production.up.railway.app/api/auth/"
+  );
 
   return (
     <LoginContainer>
@@ -24,8 +18,8 @@ export const LoginScreen = () => {
         valueEmail={email}
         valuePassword={password}
       />
-      ;
-      <CustomButton onClick={() => navigate("/home")}>
+      <CustomButton onClick={handleAuth}>Login</CustomButton>;
+      <CustomButton onClick={() => navigate("/register")}>
         If you no have acc please create new account
       </CustomButton>
     </LoginContainer>

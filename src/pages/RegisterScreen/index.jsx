@@ -1,15 +1,13 @@
-import React from "react";
 import { BoxAuthContainer } from "../../components/BoxAuthContainer";
-import { useForm } from "../../hooks/useForm";
+import { CustomButton } from "../../components/CustomButton";
+import { useHandleAuth } from "../../hooks/useHandleAuth";
 import { RegisterContainer } from "./styles";
 
 export const RegisterScreen = () => {
-  const [formValues, handleInputChange] = useForm({
-    email: "",
-    password: "",
-    name: "",
-  });
-  const { email, password, name } = formValues;
+  const [handleInputChange, handleRegister, email, password, name] =
+    useHandleAuth(
+      "https://backend-factoria-production.up.railway.app/api/auth/new"
+    );
 
   return (
     <RegisterContainer>
@@ -23,6 +21,7 @@ export const RegisterScreen = () => {
         valuePassword={password}
         handleInputChange={handleInputChange}
       />
+      <CustomButton onClick={handleRegister}>Register</CustomButton>;
     </RegisterContainer>
   );
 };
