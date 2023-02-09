@@ -7,11 +7,10 @@ export const StyledButton = styled.button`
   border: solid 1px black;
   border-radius: 1rem;
   padding: 1rem;
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   cursor: pointer;
   &:hover {
-    color: black;
-    background-color: white;
+    background-color: #00aeff;
   }
 `;

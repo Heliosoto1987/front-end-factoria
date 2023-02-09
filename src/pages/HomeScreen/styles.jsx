@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  background-color: blueviolet;
   min-height: 100vh;
   gap: 0.5rem;
   display: flex;

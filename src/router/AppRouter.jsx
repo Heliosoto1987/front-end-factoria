@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "../components/NavBar";
-import { FavoriteScreen } from "../pages/FavoriteSpace";
+import { FavoriteScreen } from "../pages/FavoriteScreen";
 import { HomeScreen } from "../pages/HomeScreen";
 import { LoginScreen } from "../pages/LoginScreen";
 import { RegisterScreen } from "../pages/RegisterScreen";
